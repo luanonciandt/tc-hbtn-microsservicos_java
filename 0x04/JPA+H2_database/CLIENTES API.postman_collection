@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "bc4e9600-6fd2-4003-ba7e-e2bb1f5b967e",
+		"name": "CLIENTES API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Miquella\",\n    \"idade\": 26,\n    \"email\": \"miqs@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api-jpa-h2/addClient"
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/api-jpa-h2/findAllClients"
+			},
+			"response": []
+		},
+		{
+			"name": "FIND_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/api-jpa-h2/findClientById/3"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Lucas\",\n    \"idade\": 17,\n    \"email\": \"lucas@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/api-jpa-h2/updateClientById/1"
+			},
+			"response": []
+		}
+	]
+}
