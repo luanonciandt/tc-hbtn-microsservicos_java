@@ -17,7 +17,7 @@ public class ExceptionService {
     }
 
     @ExceptionHandler
-    ResponseEntity<UserCPFException> handleUserCPFException(UserCPFException err){
+    ResponseEntity<CPFException> handleCPFException(CPFException err){
         UserErrorResponse uer =new UserErrorResponse();
         uer.setStatus(HttpStatus.NOT_FOUND.value());
         uer.setMessage("You have entered CPF " + err.getMessage() + " invalid.");

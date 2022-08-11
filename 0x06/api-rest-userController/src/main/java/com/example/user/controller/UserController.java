@@ -35,13 +35,13 @@ public class UserController {
     }
 
     @GetMapping("/user-cpf/{cpf}")
-    public String findUserByCPF(@PathVariable String cpf) throws UserCPFException {
+    public String findUserByCPF(@PathVariable String cpf) throws CPFException {
         String msg = "";
         boolean isCPFValid = isCPF(cpf);
         if (isCPFValid) {
             msg = "You have entered valid CPF";
         } else {
-            throw new UserCPFException(cpf);
+            throw new CPFException(cpf);
         }
         return msg;
     }
