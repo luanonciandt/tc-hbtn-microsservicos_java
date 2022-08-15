@@ -90,6 +90,4 @@ public class CalculatorControllerTest {
         assertEquals("c",  result.getResponse().getContentAsString());
     }
 
-    // TODO - Implementar os demais métodos: subNumbers, divideNumbers, factorial,
-    //        calculeDayBetweenDate, integerToBinary e integerToHexadecimal
 }

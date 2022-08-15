@@ -1,5 +1,6 @@
 package com.example.calculator.model;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -8,7 +9,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
-    Calculator calculator = new Calculator();
+    private Calculator calculator;
+
+    @BeforeEach
+    public void setup() {
+        this.calculator = new Calculator();
+    }
+
 
     @Test
     void sumTest() {
