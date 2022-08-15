@@ -1,6 +1,7 @@
 package com.example.product.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -12,13 +13,13 @@ public class Product implements Serializable {
     private String code;
     private String name;
     private String description;
-    private Double price;
+    private BigDecimal price;
     private LocalDateTime createdOne;
     private boolean status;
 
     public Product() {}
 
-    public Product(Long id, String code, String name, String description, Double price, LocalDateTime createdOne, boolean status) {
+    public Product(Long id, String code, String name, String description, BigDecimal price, LocalDateTime createdOne, boolean status) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -44,7 +45,7 @@ public class Product implements Serializable {
         return description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
@@ -72,7 +73,7 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
